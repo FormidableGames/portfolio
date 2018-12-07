@@ -1,0 +1,85 @@
+{
+    "nav": {
+      "home": " Home",
+      "about": " About us"
+    },
+    "car":{
+        "slide1":{
+            "subtitle":"Nuestro último juego",
+            "btn":"Juégalo ya"
+        },
+        "slide2":{
+            "title":"Encarna a ¥ y a patear traseros",
+            "subtitle":"Desarrollado en un mes usando JavaScript para una asignatura de la universidad",
+            "btn":"Haz clic"
+        },
+        "slide3":{
+            "title":"Mira en sus entrañas",
+            "btn":"Repositorio de Github"
+        },
+        "slide4":{
+            "title":"Otros repositorios de Github",
+            "btn":"Más"
+        }
+    },
+    "games":{
+        "title":"OTROS JUEGOS",
+        "game1":{
+            "content": "Eres, oficialmente, la mejor jugadora de tenis en el mundo. Pero eso no es suficiente para ti. Quieres demostrarle al mundo entero de lo que eres capaz.",
+            "info": "Hecho en dos días para la Ludum Dare 41 por",
+            "dev1":"Músico y programador principal",
+            "dev2":"Artista y programador",
+            "btn":"Échale un ojo"
+        },
+        "game2":{
+            "content": "Un juego de carreras se junta con uno de esos extraños minijuegos de pesca.",
+            "info": "Hecho en dos días para la Ludum Dare 41 por",
+            "btn":"Échale un ojo"
+        },
+        "game3":{
+            "content": "Hauksbee es un pequeño juego arcade protagonizado por un cuadradito feliz que quiere... ¿Vivir?",
+            "info": "Hecho en un día para la Ludum Dare 42 por",
+            "btn":"Échale un ojo"
+        },
+        "game4":{
+            "content": "¿Podrás ser el elegido para lograr el afecto de la Princesa Catalinxu?",
+            "info":"Hecho como trabajo para la universidad con API REST y Websockets por",
+            "dev1":"Artista and programadora",
+            "dev2":"Programadora principal",
+            "btn":"Échale un ojo"
+        }
+    },
+    "profiles":{
+        "title":"ABOUT US",
+        "profile1":{
+            "name": "Sara López García",
+            "role": "Artista & escritora",
+            "desc": "Intentando ser desarrolladora de videojuegos. Se supone que soy artista. Me gustan los pájaros pero yo a ellos no siempre."
+        },
+        "profile2":{
+            "name": "Nicolás Morales Barea",
+            "role": "Artista & Programador",
+            "desc": "Artista muerto de hambre que, de alguna forma, sabe programar."
+
+        },
+        "profile3":{
+            "name": "Guillermo Pitarque González",
+            "role": "Músico & escritor",
+            "desc": "Hago juegos (SALE MAL)."
+
+        },
+        "profile4":{
+            "name": "Fran Vadillo Cantos",
+            "role": "Programador & artista",
+            "desc": "La peor barba. Principalmente programador pero también puedo dibujar y diseñar un poquito. ¡Deja de juzgar mi barba!"
+
+        },
+        "profile5":{
+            "name": "Sandra Valverde Tallón",
+            "role": "Programadora",
+            "desc": "Me gusta programar así que... programo :)"
+        }
+    }
+
+
+  }

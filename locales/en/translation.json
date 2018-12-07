@@ -1,0 +1,86 @@
+{
+    "nav": {
+      "home": " Home",
+      "about": " About us"
+    },
+    "car":{
+        "slide1":{
+            "subtitle":"Our latest game",
+            "btn":"Play now"
+        },
+        "slide2":{
+            "title":"Play as ¥ and kick some *sses",
+            "subtitle":"Made in a month with JavaScript for a college subject",
+            "btn":"Just click"
+        },
+        "slide3":{
+            "title":"Take a look inside",
+            "btn":"Github repository"
+        },
+        "slide4":{
+            "title":"Our Github repositories",
+            "btn":"More"
+        }
+    },
+    "games":{
+        "title":"SOME MORE GAMES",
+        "game1":{
+            "content": "You are, officially, the best female tennis player in the world. But that's not enough for you. You want to demonstrate to the whole world what you're capable of.",
+            "info": "It was made in two days for the Ludum Dare 41 by",
+            "dev1":"Musician and main programmer",
+            "dev2":"Artist and programmer",
+            "btn":"Check it out"
+        },
+        "game2":{
+            "content": "Racing meets weird fishing minigames.",
+            "info": "It was made in two days for the Ludum Dare 41 by",
+            "btn":"Check it out"
+        },
+        "game3":{
+            "content": "Hauksbee is a little arcade game about a happy square who wants to... live?",
+            "info": "It was made in one day for the Ludum Dare 42 by",
+            "btn":"Check it out"
+        },
+        "game4":{
+            "content": "Will you be the one to earn the love of The Princess Catalinxu?",
+            "info":"Made for a college subject using API REST and Websockets by",
+            "dev1":"Artist and programmer",
+            "dev2":"Main programmer",
+            "btn":"Check it out"
+        }
+    },
+    "profiles":{
+        "title":"ABOUT US",
+        "profile1":{
+            "name": "Sara López García",
+            "role": "Artist & Writer",
+            "desc": "Trying to be a video game developer. Supposedly an artist and writer. I like birds but they don't always like me back."
+        },
+        "profile2":{
+            "name": "Nicolás Morales Barea",
+            "role": "Artist & Programmer",
+            "desc": "Starving artist who can somehow also code."
+
+        },
+        "profile3":{
+            "name": "Guillermo Pitarque González",
+            "role": "Musician & Writer",
+            "desc": "I make games (GOES WRONG)."
+
+        },
+        "profile4":{
+            "name": "Fran Vadillo Cantos",
+            "role": "Programmer & Artist",
+            "desc": "The worst beard. Mainly programmer but I can also draw and design a bit. Stop judging my beard!"
+
+        },
+        "profile5":{
+            "name": "Sandra Valverde Tallón",
+            "role": "Programmer",
+            "desc": "I like coding so... I code :)"
+
+        }
+    }
+
+
+  }

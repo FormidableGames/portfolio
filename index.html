@@ -24,11 +24,13 @@
     <script src="https://unpkg.com/i18next-xhr-backend/i18nextXHRBackend.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
 
+    <script src="jquery-i18next/jquery-i18next.min.js"></script>
+
     <link rel="stylesheet" href="css.css">
     <title>Formidable Games - Portfolio</title>
 </head>
 
-<body>
+<body class="page-container">
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
@@ -46,25 +48,27 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="#" class="navbar-left logo"><img src="images/logo-blanco.png" width="90px;" ></a>
+                        <a href="#" class="navbar-left logo">
+                            <img src="images/logo-blanco.png" width="90px;">
+                        </a>
                         <!--<a class="navbar-brand" href="#">
                             <span class="glyphicon glyphicon-bullhorn"></span> Our portfolio</a>-->
-                        
+
                     </div>
 
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li class="active">
                                 <a href="#">
-                                    <span class="glyphicon glyphicon-home"></span>  Home</a>
+                                    <span class="glyphicon glyphicon-home"></span> Home</a>
                             </li>
                             <li>
                                 <a href="#about">
-                                    <span class="glyphicon glyphicon-info-sign"></span>  About us</a>
+                                    <span class="glyphicon glyphicon-info-sign"></span> About us</a>
                             </li>
                         </ul>
-                        <button type="button" class="btn-primary" id="en" onclick="i18next.changeLanguage('en')">en</button>
-                        <button type="button" class="btn-primary" id="es" onclick="i18next.changeLanguage('es')">es</button>
+                        <button type="button" class="btn-primary" id="en" onclick="i18next.changeLanguage('en');$('.page-container').localize();">en</button>
+                        <button type="button" class="btn-primary" id="es" onclick="i18next.changeLanguage('es');$('.page-container').localize();">es</button>
                     </div>
                 </div>
             </nav>
@@ -89,8 +93,8 @@
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Generation ¥</h1>
-                        <p>Our latest game</p>                
-                            <a class="btn btn-lg btn-primary" href="https://formidablegames.github.io/generation-y/index.html" role="button">Play now</a>                 
+                        <p data-i18n="car.slide1.subtitle">Our latest game</p>
+                        <a class="btn btn-lg btn-primary" href="https://formidablegames.github.io/generation-y/index.html" role="button" data-i18n="car.slide1.btn">Play now</a>
                     </div>
                 </div>
             </div>
@@ -98,9 +102,9 @@
                 <img class="second-slide" src="images/screen1.png" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Play as ¥ and kick some *sses</h1>
-                        <p>Made in a month with JavaScript for a college subject</p> 
-                        <a class="btn btn-lg btn-primary" href="https://formidablegames.github.io/generation-y/index.html" role="button">Just click</a>   
+                        <h1 data-i18n="car.slide2.title">Play as ¥ and kick some *sses</h1>
+                        <p data-i18n="car.slide2.subtitle">Made in a month with JavaScript for a college subject</p>
+                        <a class="btn btn-lg btn-primary" href="https://formidablegames.github.io/generation-y/index.html" role="button" data-i18n="car.slide2.btn">Just click</a>
                     </div>
                 </div>
             </div>
@@ -108,8 +112,8 @@
                 <img class="third-slide" src="images/fondo-infierno.png" alt="Third slide">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Take a look inside</h1>
-                            <a class="btn btn-lg btn-primary" href="https://github.com/FormidableGames/generation-y" role="button">Github repository</a>
+                        <h1 data-i18n="car.slide3.title">Take a look inside</h1>
+                        <a class="btn btn-lg btn-primary" href="https://github.com/FormidableGames/generation-y" role="button" data-i18n="car.slide3.btn">Github repository</a>
                     </div>
                 </div>
             </div>
@@ -117,8 +121,8 @@
                 <img class="fourth-slide" src="images/screen2.png" alt="Fourth slide">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Our Github repositories</h1>
-                            <a class="btn btn-lg btn-primary" href="https://github.com/FormidableGames" role="button">More</a>
+                        <h1 data-i18n="car.slide4.title">Our Github repositories</h1>
+                        <a class="btn btn-lg btn-primary" href="https://github.com/FormidableGames" role="button" data-i18n="car.slide4.btn">More</a>
                     </div>
                 </div>
             </div>
@@ -131,128 +135,145 @@
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+    </div>
+    <!-- /.carousel -->
+
+
+    <!-- ================================================== -->
+
+    <!-- OUR WORKS -->
+    <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
+            <span class="content-divider-p" data-i18n="games.title">SOME MORE GAMES</span>
         </div>
-        <!-- /.carousel -->
-        
-        
-        <!-- ================================================== -->
-        
-        <!-- OUR WORKS -->
+    </div>
+
+    <div style="padding:0px;background-color:#000000;">
+        <div class="row games-container">
+            <div class="col-lg-3 col-sm-6" style="padding:0px;cursor: pointer;" onclick="location.href='#feature1';">
+                <div class="game-container-img" style="background-image: url('images/tennis.png');"></div>
+            </div>
+            <div class="col-lg-3 col-sm-6" style="padding:0px;cursor: pointer;" onclick="location.href='#feature2';" style="cursor: pointer;">
+                <div class="game-container-img" style="background-image: url('images/earlyboat.png');"></div>
+            </div>
+            <div class="col-lg-3 col-sm-6" style="padding:0px;cursor: pointer;" onclick="location.href='#feature3';" style="cursor: pointer;">
+                <div class="game-container-img" style="background-image: url('images/hauksbee.jpeg');background-position: bottom right;"></div>
+            </div>
+            <div class="col-lg-3 col-sm-6" style="padding:0px;cursor: pointer;" onclick="location.href='#feature4';" style="cursor: pointer;">
+                <div class="game-container-img" style="background-image: url('images/Love-letter.png');background-position: bottom right;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <a id="feature1"></a>
         <div style="position:relative;">
             <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
-                <span class="content-divider-p">SOME MORE GAMES</span>
+                <span class="content-divider-p">OF TENNIS AND MOUSTACHES</span>
             </div>
         </div>
-        
-        <div style="padding:0px;background-color:#000000;">
-            <div class="row games-container">
-                <div class="col-lg-3 col-sm-6" style="padding:0px;cursor: pointer;" onclick="location.href='#feature1';">
-                    <div class="game-container-img" style="background-image: url('images/tennis.png');"></div>
-                </div>
-                <div class="col-lg-3 col-sm-6" style="padding:0px;cursor: pointer;" onclick="location.href='#feature2';" style="cursor: pointer;">
-                    <div class="game-container-img" style="background-image: url('images/earlyboat.png');"></div>
-                </div>
-                <div class="col-lg-3 col-sm-6" style="padding:0px;cursor: pointer;" onclick="location.href='#feature3';" style="cursor: pointer;">
-                    <div class="game-container-img" style="background-image: url('images/hauksbee.jpeg');background-position: bottom right;"></div>
-                </div>
-                <div class="col-lg-3 col-sm-6" style="padding:0px;cursor: pointer;" onclick="location.href='#feature4';" style="cursor: pointer;">
-                    <div class="game-container-img" style="background-image: url('images/Love-letter.png');background-position: bottom right;"></div>
-                </div>
+        <div class="row featurette" style="background-image: url('images/tennis.png');">
+
+            <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>
+            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-10 game-featurete-container">
+                <p class="lead" data-i18n="games.game1.content">You are, officially, the best female tennis player in the world. But that's not enough for you. You want
+                    to demonstrate to the whole world what you're capable of.
+                    <br> It was made in two days for the Ludum Dare 41 by
+                </p>
+                <p data-i18n="games.game1.info"></p>
+                <p>
+                    <a href="https://github.com/Knainwud">Guillermo Pitarque</a>
+                    <p data-i18n="games.game1.dev1">Musician and main programmer</p>
+
+                    <a href="https://github.com/FranVadillo">Fran Vadillo</a>
+                    <p data-i18n="games.game1.dev2">Artist and programmer</p>
+                </p>
+                <a class="btn btn-lg btn-primary" href="https://gamejolt.com/games/oftennisandmoustaches/335475" role="button" data-i18n="games.game1.btn">Check it out</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-1"></div>
+        </div>
+
+        <a id="feature2"></a>
+        <div style="position:relative;">
+            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
+                <span class="content-divider-p">EARLY BOAT GETS THE FISH</span>
             </div>
         </div>
-        
-        <div>
-            <!-- START THE FEATURETTES -->
-        
-            <hr class="featurette-divider">
-        
-            <a id="feature1"></a>
-            <div style="position:relative;">
-                <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
-                    <span class="content-divider-p">OF TENNIS AND MOUSTACHES</span>
-                </div>
+        <div class="row featurette" style="background-image: url('images/earlyboat.png');">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-1"></div>
+            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-10 game-featurete-container">
+
+                <p class="lead" data-i18n="games.game2.content">Racing meets weird fishing minigames.
+                    <br> It was made in two days for the Ludum Dare 41 by
+                </p>
+                <p data-i18n="games.game2.info"></p>
+                <p>
+                    <a href="https://github.com/nichromatic">Nicolás Morales</a>
+
+                </p>
+                <a class="btn btn-lg btn-primary" href="https://nichromatic.itch.io/early-boat-gets-the-fish" role="button" data-i18n="games.game2.btn">Check it out</a>
+
             </div>
-        
-            <div class="row featurette" style="background-image: url('images/tennis.png');">
-        
-                <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>
-                <div class="col-lg-4 col-md-5 col-sm-5 col-xs-10 game-featurete-container">
-                    <p class="lead">You are, officially, the best female tennis player in the world. But that's not enough for you. You want to demonstrate to the whole world what you're capable of.<br>
-                            It was made in two days for the Ludum Dare 41 by 
-                        
-                        <a href="https://github.com/Knainwud">Guillermo Pitarque</a> (musician and main programmer) and 
-                        <a href="https://github.com/FranVadillo">Fran Vadillo</a>(artist and programmer).
-                        
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="https://gamejolt.com/games/oftennisandmoustaches/335475" role="button">Check it out</a>
-                    </p>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-1"></div>
+            <div class="col-lg-2 col-md-1 col-sm-6 col-xs-1"></div>
+        </div>
+
+        <a id="feature3"></a>
+        <div style="position:relative;">
+            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
+                <span class="content-divider-p">HAUKSBEE</span>
             </div>
-        
-            <a id="feature2"></a>
-            <div style="position:relative;">
-                <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
-                    <span class="content-divider-p">EARLY BOAT GETS THE FISH</span>
-                </div>
+        </div>
+
+        <div class="row featurette" style="background-image: url('images/hauksbee.jpeg');">
+            <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>
+            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-10 game-featurete-container">
+                <p class="lead" data-i18n="games.game3.content">Hauksbee is a little arcade game about a happy square who wants to... live?
+                    <br>It was made in one day for the Ludum Dare 42 by
+
+                </p>
+                <p data-i18n="games.game3.info"></p>
+                <p>
+                    <a href="https://github.com/FranVadillo">Fran Vadillo.</a>
+                </p>
+                <a class="btn btn-lg btn-primary" href="https://gamejolt.com/games/hauksbee/360899" role="button" data-i18n="games.game3.btn">Check it out</a>
+
+
             </div>
-        
-            <div class="row featurette" style="background-image: url('images/earlyboat.png');">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-1"></div>
-                <div class="col-lg-4 col-md-5 col-sm-5 col-xs-10 game-featurete-container">
-                    <p class="lead">Racing meets weird fishing minigames.<br>
-                            It was made in two days for the Ludum Dare 41 by 
-                        <a href="https://github.com/nichromatic">Nico Morales.</a></p>
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="https://nichromatic.itch.io/early-boat-gets-the-fish" role="button">Check it out</a>
-                    </p>
-                </div>
-                <div class="col-lg-2 col-md-1 col-sm-6 col-xs-1"></div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-1"></div>
+        </div>
+
+        <a id="feature4"></a>
+        <div style="position:relative;">
+            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
+                <span class="content-divider-p">LOVE LETTER ONLINE</span>
             </div>
-        
-            <a id="feature3"></a>
-            <div style="position:relative;">
-                <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
-                    <span class="content-divider-p">HAUKSBEE</span>
-                </div>
+        </div>
+
+        <div class="row featurette" style="background-image: url('images/love-letter.png');background-position: bottom right;">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-1"></div>
+            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-10 game-featurete-container">
+                <p class="lead" data-i18n="games.game4.content">Will you be the one to earn the love of The Princess Catalinxu?
+                    <br> Made for a college subject using API REST and Websockets by
+
+                </p>
+                <p data-i18n="games.game4.info"></p>
+                <p>
+                    <a href="https://github.com/SaraLopGar">Sara López</a>
+                    <p data-i18n="games.game4.dev1">Artist and programmer</p>
+                    <a href="https://github.com/svalverdet">Sandra Valverde</a>
+                    <p data-i18n="games.game4.dev2">Main programmer</p>
+                </p>
+
+                <a class="btn btn-lg btn-primary" href="https://github.com/svalverdet/Love-Letter-Online" role="button" data-i18n="games.game4.btn">Check it out</a>
+
+
             </div>
-        
-            <div class="row featurette" style="background-image: url('images/hauksbee.jpeg');">
-                <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>
-                <div class="col-lg-4 col-md-5 col-sm-5 col-xs-10 game-featurete-container">
-                    <p class="lead">Hauksbee is a little arcade game about a happy square who wants to... live?
-                        <br>It was made in one day for the Ludum Dare 42 by
-                        <a href="https://github.com/FranVadillo">Fran Vadillo.</a>
-                    </p>
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="https://gamejolt.com/games/hauksbee/360899" role="button">Check it out</a>
-                    </p>
-        
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-1"></div>
-            </div>
-        
-            <a id="feature4"></a>
-            <div style="position:relative;">
-                <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
-                    <span class="content-divider-p">LOVE LETTER ONLINE</span>
-                </div>
-            </div>
-        
-            <div class="row featurette" style="background-image: url('images/love-letter.png');background-position: bottom right;">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-1"></div>
-                <div class="col-lg-4 col-md-5 col-sm-5 col-xs-10 game-featurete-container">
-                    <p class="lead">Will you be the one to earn the love of The Princess Catalinxu?
-                        <br> Made for a college subject using API REST and Websockets by 
-                        <a href="https://github.com/SaraLopGar">Sara López</a> (artist and programmer) and
-                        <a href="https://github.com/svalverdet">Sandra Valverde</a> (main programmer).
-                    </p>
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="https://github.com/svalverdet/Love-Letter-Online" role="button">Check it out</a>
-                    </p>
-                </div>
-                <div class="col-lg-2 col-md-1 col-sm-6 col-xs-1"></div>
-            </div>
+            <div class="col-lg-2 col-md-1 col-sm-6 col-xs-1"></div>
+        </div>
         <hr class="featurette-divider">
     </div>
     <!-- /END THE FEATURETTES -->
@@ -262,10 +283,10 @@
     <a id="about"></a>
     <div style="position:relative;">
         <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
-            <span class="content-divider-p">ABOUT US</span>
+            <span class="content-divider-p" data-i18n="profiles.title">ABOUT US</span>
         </div>
     </div>
-    
+
     <div>
         <div class="row">
             <div class="col-sm-5ths flip-card">
@@ -273,28 +294,29 @@
                     <div class="flip-card-front" style="background-image: url('images/Sara.png');">
                         <div class="front-desc">
                             <h1>Sara López García</h1>
-                            <p>Artist & Writer</p>
+                            <p data-i18n="profiles.profile1.role">Artist & Writer</p>
                         </div>
                     </div>
                     <div class="flip-card-back">
                         <h1>Sara López García</h1>
-                        <p>Artist & Writer</p>
-                        <p>Trying to be a video game developer. Supposedly an artist and writer. I like birds but they don't always like me back.</p>
+                        <p data-i18n="profiles.profile1.role">Artist & Writer</p>
+                        <p data-i18n="profiles.profile1.desc">Trying to be a video game developer. Supposedly an artist and writer. I like birds but they don't
+                            always like me back.</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-5ths flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front card-nico" style="background-image: url('images/avatar_nico.jpg');">
-                        <div class="front-desc">    
-                            <h1>Nicolás Morales Barea</h1>                    
-                            <p>Artist & Programmer</p>
+                        <div class="front-desc">
+                            <h1>Nicolás Morales Barea</h1>
+                            <p data-i18n="profiles.profile2.role">Artist & Programmer</p>
                         </div>
                     </div>
                     <div class="flip-card-back">
                         <h1>Nicolás Morales Barea</h1>
-                        <p>Artist & Programmer</p>
-                        <p>Starving artist who can somehow also code.</p>
+                        <p data-i18n="profiles.profile2.role">Artist & Programmer</p>
+                        <p data-i18n="profiles.profile2.desc">Starving artist who can somehow also code.</p>
                     </div>
                 </div>
             </div>
@@ -303,13 +325,13 @@
                     <div class="flip-card-front" style="background-image: url('images/Guille.jpeg');">
                         <div class="front-desc">
                             <h1>Guillermo Pitarque González</h1>
-                            <p>Musician & Writer</p>
+                            <p data-i18n="profiles.profile3.role">Musician & Writer</p>
                         </div>
                     </div>
                     <div class="flip-card-back">
                         <h1>Guillermo Pitarque González</h1>
-                        <p>Musician & Writer</p>
-                        <p>I make games (GOES WRONG)</p>
+                        <p data-i18n="profiles.profile3.role">Musician & Writer</p>
+                        <p data-i18n="profiles.profile3.desc">I make games (GOES WRONG)</p>
                     </div>
                 </div>
             </div>
@@ -318,13 +340,13 @@
                     <div class="flip-card-front" style="background-image: url('images/Fran.jpg');">
                         <div class="front-desc">
                             <h1>Fran Vadillo Cantos</h1>
-                            <p>Programmer & Artist</p>
+                            <p data-i18n="profiles.profile4.role">Programmer & Artist</p>
                         </div>
                     </div>
                     <div class="flip-card-back">
                         <h1>Fran Vadillo Cantos</h1>
-                        <p>Programmer & Artist</p>
-                        <p>The worst beard. Mainly programmer but I can also draw and design a bit. Stop judging my beard!</p>
+                        <p data-i18n="profiles.profile4.role">Programmer & Artist</p>
+                        <p data-i18n="profiles.profile4.desc">The worst beard. Mainly programmer but I can also draw and design a bit. Stop judging my beard!</p>
                     </div>
                 </div>
             </div>
@@ -333,18 +355,18 @@
                     <div class="flip-card-front" style="background-image: url('images/Sandra.jpeg');">
                         <div class="front-desc">
                             <h1>Sandra Valverde Tallón</h1>
-                            <p>Programmer</p>
+                            <p data-i18n="profiles.profile5.role">Programmer</p>
                         </div>
                     </div>
                     <div class="flip-card-back">
                         <h1>Sandra Valverde Tallón</h1>
-                        <p>Programmer</p>
-                        <p>I like coding so... I code :)</p>
+                        <p data-i18n="profiles.profile5.role">Programmer</p>
+                        <p data-i18n="profiles.profile5.desc">I like coding so... I code :)</p>
                     </div>
                 </div>
             </div>
         </div>
-    
+
     </div>
 
     <!-- FOOTER -->
@@ -362,21 +384,43 @@
 
     <script type="text/javascript">
         // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
+        window.onscroll = function () { scrollFunction() };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
         }
-    }
 
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+
+
+        i18next.use(window.i18nextXHRBackend).init({
+
+            debug: true,
+            fallbackLng: 'en',
+            backend: {
+                loadPath: "locales/{{lng}}/{{ns}}.json"
+            },
+            returnObjects: !0
+        },
+            function (err, t) {
+                jqueryI18next.init(i18next, $);
+                $(".page-container").localize();
+            })
+
+
+
+
+
     </script>
 </body>
 
