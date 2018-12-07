@@ -42,7 +42,7 @@
             "btn":"Échale un ojo"
         },
         "game4":{
-            "content": "¿Podrás ser el elegido para lograr el afecto de la Princesa Catalinxu?",
+            "content": "¿Lograrás ser el pretendiente elegido por la Princesa Catalinxu?",
             "info":"Hecho como trabajo para la universidad con API REST y Websockets por",
             "dev1":"Artista and programadora",
             "dev2":"Programadora principal",
