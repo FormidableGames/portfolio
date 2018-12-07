@@ -23,7 +23,9 @@ body {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #b811b8;
+    background-color: #2b2b2b;
+    border-color: #000000;
+    opacity: 1;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -31,7 +33,7 @@ body {
   }
   
   #myBtn:hover {
-    background-color: #555;
+    background-color: #b811b8;
   }
 
   
@@ -246,7 +248,10 @@ body {
   }
   
   .flip-card-back {
-    background-color: #b811b8;
+    background-color: #2b2b2b;
+    border-color: #000000;
+    opacity: 1;
+    /*background-color: #b811b8;*/
     color: white;
     transform: rotateY(180deg);
     z-index: 1;
