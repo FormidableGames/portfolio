@@ -44,7 +44,7 @@
         "game4":{
             "content": "¿Lograrás ser el pretendiente elegido por la Princesa Catalinxu?",
             "info":"Hecho como trabajo para la universidad con API REST y Websockets por",
-            "dev1":"Artista and programadora",
+            "dev1":"Artista y programadora",
             "dev2":"Programadora principal",
             "btn":"Échale un ojo"
         }
