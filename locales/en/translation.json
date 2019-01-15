@@ -9,18 +9,18 @@
             "btn":"Play now"
         },
         "slide2":{
+            "title":"Escape the alien party",
+            "btn":"Just click"
+        },
+        "slide3":{
+            "subtitle":"Our last game",
+            "btn":"Play now"
+        },
+        "slide4":{
             "title":"Play as ¥ and kick some *sses",
             "subtitle":"Made in a month with JavaScript for a college subject",
             "btn":"Just click"
         },
-        "slide3":{
-            "title":"Take a look inside",
-            "btn":"Github repository"
-        },
-        "slide4":{
-            "title":"Our Github repositories",
-            "btn":"More"
-        }
     },
     "games":{
         "title":"SOME MORE GAMES",
